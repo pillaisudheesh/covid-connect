@@ -1,27 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Route, withRouter } from 'react-router';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+// import Login from './Login';
+// import AuthRedirect from '../components/authRedirect';
+// import AppointmentList from './AppointmentList';
+import { logoutUser } from './store/actions/authAction';
+import Home from './Home';
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        {/* <AuthRedirect exact path="/appointments" auth={this.props.auth} component={AppointmentList} /> */}
+        <Route exact path='/' component={Home} />
+        {/* <Route path='/login' component={Login} /> */}
+       
+      </div>
+    );
+  }
 }
+App.propTypes = {
+  auth: PropTypes.bool,
+  logoutUser: PropTypes.func,
+};
 
-export default App;
+export const mapStateToProps = (state) => ({
+  auth: state.auth.authenticated,
+})
+
+export default withRouter(connect(mapStateToProps, { logoutUser })(App));
