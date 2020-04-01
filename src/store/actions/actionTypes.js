@@ -21,3 +21,8 @@ export const FILTER_LOCATION = "filter_location";
 export const FILTER_DEPARTMENT = "filter_department";
 export const DEPARTMENTS_LIST_SUCCESS = "departments_list_success";
 export const RECEIVED_ERROR = "recieved_error";
+
+export const WORLD_WIDE_DATA = "world_wide_data";
+export const COUNTRY_WIDE_DATA = "country_wide_data";
+export const STATE_WIDE_DATA = "state_wide_data";
+export const COUNTRY_WIDE_DATA_SUCCESS = "country_wide_data_success";
