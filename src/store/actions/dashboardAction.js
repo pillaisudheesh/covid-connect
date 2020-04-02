@@ -2,7 +2,6 @@ import * as types from './actionTypes';
 
 
 export function countryWideCovidInfo(country){
-    debugger;
     return async dispatch => {
         const payload = {
             confirmed: 1764,
