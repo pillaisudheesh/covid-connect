@@ -6,17 +6,17 @@ import * as dashboardActions from '../../../store/actions/dashboardAction';
 
 
 export class HomeContainer extends Component{
+  
   componentDidMount(){
     this.props.dispatch(dashboardActions.countryWideCovidInfo('India'));
   }
     render(){
-      const covid = this.props.covidInfo;
-      console.log(covid);
         return(
             <div className={this.props.className}>
+              {this.props.covidInfo ?
                 <TrackerInfoContainer statistics={this.props.covidInfo} />
-                
-       
+                :""
+              }
         </div>
         );
     }
@@ -29,7 +29,6 @@ HomeContainer.propTypes = {
 };
 
 function mapStateToProps(state){
-  debugger;
   return {
     covidInfo:state.dashboard.convidInfo
   };

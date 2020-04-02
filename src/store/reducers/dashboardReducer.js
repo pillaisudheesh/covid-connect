@@ -5,7 +5,6 @@ const initState = {
   };
 
 export default function(state = initState, action) {
-  debugger;
     switch (action.type) {
       case types.COUNTRY_WIDE_DATA:
         return { ...state, convidInfo: action.payload };
