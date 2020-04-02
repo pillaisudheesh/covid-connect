@@ -1,12 +1,13 @@
 import * as types from './actionTypes';
 
 
-export function getCounrtyWideCovidInfo(country){
+export function countryWideCovidInfo(country){
+    debugger;
     return async dispatch => {
         const payload = {
-            confirmed: 1200,
-            recovered: 20,
-            deceased: 30
+            confirmed: 1764,
+            recovered: 150,
+            deceased: 50
         }
         dispatch(countryWideDataSuccess(payload));
     }

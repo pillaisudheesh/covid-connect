@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Route, withRouter,Switch } from 'react-router';
+import { ThemeProvider } from '@material-ui/styles';
 import Authorization from './Authorization';
 import Header from './features/Header';
+import theme from './theme';
 
 
 const Home = async() => {
@@ -21,10 +23,10 @@ export class App extends Component {
   }
   render() {
     return (
-      <div>
+      <ThemeProvider theme={theme}>
         <Header />
        {this.appJsx()}
-      </div>
+      </ThemeProvider>
     );
   }
 }
