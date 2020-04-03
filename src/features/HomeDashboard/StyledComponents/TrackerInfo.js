@@ -49,9 +49,15 @@ padding:32px;
 .differenceIcon {
     color: ${theme.palette.error.dark};
 }
+.differenceIcon-upward {
+    color: ${theme.palette.primary.dark};
+}
 
 .differenceValue {
     color: ${theme.palette.error.dark};
     margin-right: ${theme.spacing(1)}px;
 }
+.progress {
+    margin-top: ${theme.spacing(3)}px;
+  }
 `;
