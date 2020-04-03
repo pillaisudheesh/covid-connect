@@ -33,6 +33,9 @@ const TrackerInfo = props => {
                                 <Typography variant="caption">
                                  www.mohfw.gov.in
                                  </Typography>
+                                 <Typography variant="caption">
+                                 &nbsp;| last update: {statistics.lastUpdated}
+                                 </Typography>
                             </div>
                         </CardContent>
                     </Card>
