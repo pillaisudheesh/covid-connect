@@ -15,8 +15,8 @@ const TrackerInfo = props => {
     const deceasedPercentage = Math.round(statistics.deceased * 100 / totalCases);
     const recoveredPercentage = Math.round(statistics.recovered * 100 / totalCases);
     const oldTotalData = statistics.oldConfirmed + statistics.oldRecovered + statistics.oldDeceased;
-    const activePercentage = Math.round((statistics.confirmed - statistics.oldConfirmed) * 100/totalCases);
-    const activeTotalPercentage = Math.round((totalCases - oldTotalData) * 100/totalCases);
+    const activePercentage = Math.round((statistics.confirmed - statistics.oldConfirmed) * 100/oldTotalData);
+    const activeTotalPercentage = Math.round((totalCases - oldTotalData) * 100/oldTotalData);
     return (
         <div className={className}>
             <Grid container spacing={4}>
