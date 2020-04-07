@@ -47,7 +47,7 @@ function getCovidData(country, date, since) {
 export function countryWideCovidInfo(country,date, since){
     return async dispatch => {
         debugger;
-        let covidInfo = getCovidData(country,date, since);
+        const covidInfo = getCovidData(country,date, since);
         dispatch(countryWideDataSuccess(covidInfo));
     }
     
