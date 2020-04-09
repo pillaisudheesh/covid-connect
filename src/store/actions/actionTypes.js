@@ -26,3 +26,4 @@ export const WORLD_WIDE_DATA = "world_wide_data";
 export const COUNTRY_WIDE_DATA = "country_wide_data";
 export const STATE_WIDE_DATA = "state_wide_data";
 export const COUNTRY_WIDE_DATA_SUCCESS = "country_wide_data_success";
+export const COUNTRY_WIDE_DATA_LIST = "country_wide_data_list";

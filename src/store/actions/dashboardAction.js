@@ -5,7 +5,6 @@ import covidData from '../data/covidTimelineData';
 
 
 function getCovidData(country, date, since) {
-    debugger;
     const data = covidData;
     let dateSince = new Date(date);
     let payload = null;
@@ -46,7 +45,6 @@ function getCovidData(country, date, since) {
 
 export function countryWideCovidInfo(country,date, since){
     return async dispatch => {
-        debugger;
         const covidInfo = getCovidData(country,date, since);
         dispatch(countryWideDataSuccess(covidInfo));
     }
@@ -56,6 +54,27 @@ export function countryWideCovidInfo(country,date, since){
 export function countryWideDataSuccess(payload){
     return {
         type: types.COUNTRY_WIDE_DATA,
+        payload: payload,
+    };
+}
+
+export function countryWideCovidDataList(country, since){
+    return async dispatch => {
+        const data = covidData;
+        let payload = null;
+        payload = data.countries[country].sort((a,b) => {
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+            return dateA - dateB;
+        });
+        debugger;
+        dispatch(countryWideDataListSuccess(payload));
+    }
+}
+
+export function countryWideDataListSuccess(payload){
+    return {
+        type: types.COUNTRY_WIDE_DATA_LIST,
         payload: payload,
     };
 }
