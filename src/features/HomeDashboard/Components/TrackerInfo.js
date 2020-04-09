@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardContent, Grid, Typography, Avatar, LinearProgress } from '@material-ui/core';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+// import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import FavoriteIcon from '@material-ui/icons/Favorite';
