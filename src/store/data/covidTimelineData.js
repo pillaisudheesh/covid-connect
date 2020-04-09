@@ -3,10 +3,10 @@ const covidData = {
         "India":[
             {
                 "date":"04/09/2020",
-                "confirmed":5095,
-                "recovered":472,
-                "deceased":166,
-                "lastUpdated":"04/09/2020 09:00 AM"
+                "confirmed":5218,
+                "recovered":477,
+                "deceased":169,
+                "lastUpdated":"04/09/2020 06:00 PM"
             },
             {
                 "date":"04/08/2020",
