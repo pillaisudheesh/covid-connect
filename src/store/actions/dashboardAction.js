@@ -67,7 +67,6 @@ export function countryWideCovidDataList(country, since){
             const dateB = new Date(b.date);
             return dateA - dateB;
         });
-        debugger;
         dispatch(countryWideDataListSuccess(payload));
     }
 }
