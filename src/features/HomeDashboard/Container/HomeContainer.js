@@ -52,7 +52,6 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch) {
-  debugger;
   return{
     actions: bindActionCreators(dashboardActions, dispatch)
   }
