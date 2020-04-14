@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {TrackerInfoContainer} from '../StyledComponents/TrackerInfo';
 import * as dashboardActions from '../../../store/actions/dashboardAction';
 import {GraphInfoContainer} from '../StyledComponents/GraphInfo';
+import { bindActionCreators } from 'redux';
 
 
 export class HomeContainer extends Component{
@@ -16,8 +17,8 @@ export class HomeContainer extends Component{
 
     const currentDate = mm + '/' + dd + '/' + yyyy;
     const since = 10;
-    this.props.dispatch(dashboardActions.countryWideCovidInfo('India',currentDate, since));
-    this.props.dispatch(dashboardActions.countryWideCovidDataList('India', since));
+    this.props.actions.countryWideCovidInfo('India',currentDate, since);
+    this.props.actions.countryWideCovidDataList('India', since);
   }
     render(){
         return(
@@ -40,6 +41,7 @@ HomeContainer.propTypes = {
     covidInfo: PropTypes.object,
     dispatch: PropTypes.func,
     covidDataList: PropTypes.array,
+    actions: PropTypes.object,
 };
 
 function mapStateToProps(state){
@@ -49,4 +51,10 @@ function mapStateToProps(state){
   };
 }
 
-export default connect(mapStateToProps)(HomeContainer);
+function mapDispatchToProps(dispatch) {
+  return{
+    actions: bindActionCreators(dashboardActions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);

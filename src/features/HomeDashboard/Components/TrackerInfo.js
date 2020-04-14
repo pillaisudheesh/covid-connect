@@ -23,7 +23,7 @@ const TrackerInfo = props => {
                 <Grid item lg={12} sm={12} xl={12} xs={12}>
                 <Card  {...rest} className="card-height">
                         <CardContent>
-                            <div>Covid Statistics from India</div>
+                            <div className="main-header">Covid Statistics from India</div>
                             <div className="difference">
                                 <Typography
                                     className="differenceValue"

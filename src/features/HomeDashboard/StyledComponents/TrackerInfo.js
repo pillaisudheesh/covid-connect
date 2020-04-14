@@ -4,6 +4,10 @@ import theme from '../../../theme';
 
 export const TrackerInfoContainer = styled(TrackerInfo)`
 padding:32px;
+.main-header {
+    font-weight:100;
+    font-size:30px;
+}
 .card-height {
     height:100%;
 }
