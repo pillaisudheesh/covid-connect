@@ -20,20 +20,20 @@ export class HomeContainer extends Component{
     this.props.actions.countryWideCovidInfo('India',currentDate, since);
     this.props.actions.countryWideCovidDataList('India', since);
   }
-    render(){
-        return(
-            <div className={this.props.className}>
-              {this.props.covidInfo ?
-                <TrackerInfoContainer statistics={this.props.covidInfo} since={10}/>
-                :""
-              }
-              {this.props.covidDataList && this.props.covidDataList.length > 0?
-                <GraphInfoContainer covidDataList={this.props.covidDataList} since={10}/>
-                :""
-              }
-        </div>
-        );
-    }
+  render(){
+      return(
+          <div className={this.props.className}>
+            {this.props.covidInfo ?
+              <TrackerInfoContainer statistics={this.props.covidInfo} since={10}/>
+              :""
+            }
+            {this.props.covidDataList && this.props.covidDataList.length > 0?
+              <GraphInfoContainer covidDataList={this.props.covidDataList} since={10}/>
+              :""
+            }
+      </div>
+      );
+  }
 }
 
 HomeContainer.propTypes = {
@@ -54,7 +54,7 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch) {
   return{
     actions: bindActionCreators(dashboardActions, dispatch)
-  }
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);
