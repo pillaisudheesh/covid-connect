@@ -8,6 +8,13 @@ import { bindActionCreators } from 'redux';
 
 
 export class HomeContainer extends Component{
+
+  constructor(props) {
+    super(props);
+    this.state = { 
+      since:10,
+    };
+  }
   
   componentDidMount(){
     const today = new Date();
@@ -16,19 +23,18 @@ export class HomeContainer extends Component{
     const yyyy = today.getFullYear();
 
     const currentDate = mm + '/' + dd + '/' + yyyy;
-    const since = 10;
-    this.props.actions.countryWideCovidInfo('India',currentDate, since);
-    this.props.actions.countryWideCovidDataList('India', since);
+    this.props.actions.countryWideCovidInfo('India',currentDate, this.state.since);
+    this.props.actions.countryWideCovidDataList('India', this.state.since);
   }
   render(){
       return(
           <div className={this.props.className}>
             {this.props.covidInfo ?
-              <TrackerInfoContainer statistics={this.props.covidInfo} since={10}/>
+              <TrackerInfoContainer statistics={this.props.covidInfo} since={this.state.since}/>
               :""
             }
             {this.props.covidDataList && this.props.covidDataList.length > 0?
-              <GraphInfoContainer covidDataList={this.props.covidDataList} since={10}/>
+              <GraphInfoContainer covidDataList={this.props.covidDataList} since={this.state.since}/>
               :""
             }
       </div>
