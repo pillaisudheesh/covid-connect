@@ -1,34 +1,38 @@
-import React,{Component}  from 'react';
-import {Line} from 'react-chartjs-2';
-import { Card, CardContent, Grid, Typography, Avatar, LinearProgress } from '@material-ui/core';
+import React, { Component } from 'react';
+import { Line, Bar } from 'react-chartjs-2';
+import { Card, CardContent, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 
 export class GraphInfo extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       covidInfoList: [],
-      data: [],
+      activeCases: [],
+      deathsPerDay: []
     };
-   }
+  }
 
   componentDidMount() {
     const dataList = this.props.covidDataList;
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May","June","July", "Aug", "Sept", "Oct", "Nov","Dec"];
-    
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
     const dates = dataList.map((data, index) => {
       const dateSince = new Date(data.date);
       const dd = String(dateSince.getDate()).padStart(2, '0');
       const mm = monthNames[dateSince.getMonth()];
-      const modifedDate = mm + '-' + dd ;
+      const modifedDate = mm + '-' + dd;
       return modifedDate;
     });
     const activeCases = dataList.map((data, index) => {
       return data.confirmed;
     })
-    const data = {
-      labels: dates.slice(dates.length-10, dates.length),
+    const deathPerDay = dataList.map((data, index) => {
+      return data.deaths;
+    })
+    const activeCaseData = {
+      labels: dates.slice(dates.length - 10, dates.length),
       datasets: [
         {
           label: 'Covid Data -Active Cases',
@@ -49,31 +53,57 @@ export class GraphInfo extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: activeCases.slice(activeCases.length-10, activeCases.length)
+          data: activeCases.slice(activeCases.length - 10, activeCases.length)
+        }
+      ]
+    };
+    const deaths = {
+      labels: dates.slice(dates.length - 10, dates.length),
+      datasets: [
+        {
+          label: 'Covid Data -Deaths per day',
+          backgroundColor: '#e53935',
+          borderColor: '#e53935',
+          borderWidth: 1,
+          hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+          hoverBorderColor: '#e53935',
+          data: deathPerDay.slice(deathPerDay.length - 10, deathPerDay.length)
         }
       ]
     };
     this.setState(() => ({
-      covidInfoList : dataList,
-      data: data
+      covidInfoList: dataList,
+      activeCases: activeCaseData,
+      deathsPerDay: deaths
     }));
   }
-  render(){
-      return(
-        <div className={this.props.className}>
-          <Grid container spacing={4}>
-              <Grid item lg={9} sm={12} xl={12} xs={12}>
-              <Card className="card-height">
-                      <CardContent>
-                      <div>
-                <Line data={this.state.data} />
-          </div>
-                      </CardContent>
-                  </Card>
-              </Grid>
+  render() {
+    return (
+      <div className={this.props.className}>
+        <Grid container spacing={4}>
+          <Grid item lg={6} sm={12} xl={12} xs={12}>
+            <Card className="card-height">
+              <CardContent>
+                <div>
+                  <Line data={this.state.activeCases} />
+                </div>
+              </CardContent>
+            </Card>
           </Grid>
-        </div>
-      );
+          <Grid item lg={6} sm={12} xl={12} xs={12}>
+            <Card className="card-height">
+              <CardContent>
+                <div>
+                <Bar
+                  data={this.state.deathsPerDay}
+                />
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </div>
+    );
 
   }
 }
