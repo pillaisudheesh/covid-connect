@@ -2,6 +2,16 @@ const covidData = {
     "countries":{
         "India":[
             {
+                "date":"04/24/2020",
+                "confirmed":17915,
+                "recovered":4814,
+                "deceased":723,
+                "deaths":37,
+                "newCases":1752,
+                "recovery":489,
+                "lastUpdated":"04/24/2020 05:00 PM"
+            },
+            {
                 "date":"04/23/2020",
                 "confirmed":16689,
                 "recovered":4325,
@@ -166,6 +176,9 @@ const covidData = {
                 "confirmed":3981,
                 "recovered":325,
                 "deceased":114,
+                "deaths":13,
+                "newCases":485,
+                "recovery":34,
                 "lastUpdated":"04/07/2020 09:00 AM"
             },
             {
@@ -173,6 +186,9 @@ const covidData = {
                 "confirmed":3666,
                 "recovered":292,
                 "deceased":109,
+                "deaths":28,
+                "newCases":508,
+                "recovery":44,
                 "lastUpdated":"04/06/2020 09:00 AM"
             },
             {
@@ -180,6 +196,9 @@ const covidData = {
                 "confirmed":3219,
                 "recovered":275,
                 "deceased":83,
+                "deaths":8,
+                "newCases":704,
+                "recovery":62,
                 "lastUpdated":"04/05/2020 06:00 PM"
             },
             {
@@ -187,6 +206,9 @@ const covidData = {
                 "confirmed":2784,
                 "recovered":212,
                 "deceased":75,
+                "deaths":13,
+                "newCases":505,
+                "recovery":50,
                 "lastUpdated":"04/04/2020 06:00 PM"
             },
             {
@@ -194,6 +216,9 @@ const covidData = {
                 "confirmed":2322,
                 "recovered":162,
                 "deceased":62,
+                "deaths":9,
+                "newCases":525,
+                "recovery":7,
                 "lastUpdated":"04/03/2020 06:00 PM"
             },
             {
@@ -201,6 +226,9 @@ const covidData = {
                 "confirmed":1860,
                 "recovered":155,
                 "deceased":55,
+                "deaths":12,
+                "newCases":478,
+                "recovery":12,
                 "lastUpdated":"04/02/2020 09:00 AM"
             },
             {
@@ -208,6 +236,9 @@ const covidData = {
                 "confirmed":1649,
                 "recovered":144,
                 "deceased":41,
+                "deaths":6,
+                "newCases":235,
+                "recovery":20,
                 "lastUpdated":"04/01/2020 09:00 AM"
             },
             {
@@ -215,6 +246,9 @@ const covidData = {
                 "confirmed":1238,
                 "recovered":124,
                 "deceased":35,
+                "deaths":3,
+                "newCases":437,
+                "recovery":22,
                 "lastUpdated":"03/31/2020 09:00 AM"
             },
             {
@@ -222,6 +256,9 @@ const covidData = {
                 "confirmed":1117,
                 "recovered":102,
                 "deceased":32,
+                "deaths":5,
+                "newCases":146,
+                "recovery":6,
                 "lastUpdated":"03/30/2020 09:00 AM"
             },
             {
@@ -229,6 +266,9 @@ const covidData = {
                 "confirmed":902,
                 "recovered":95,
                 "deceased":27,
+                "deaths":8,
+                "newCases":227,
+                "recovery":16,
                 "lastUpdated":"03/29/2020 09:00 AM"
             },
             {
@@ -236,6 +276,9 @@ const covidData = {
                 "confirmed":818,
                 "recovered":80,
                 "deceased":20,
+                "deaths":0,
+                "newCases":106,
+                "recovery":13,
                 "lastUpdated":"03/28/2020 09:00 AM"
             },
             {
@@ -243,6 +286,9 @@ const covidData = {
                 "confirmed":742,
                 "recovered":74,
                 "deceased":18,
+                "deaths":3,
+                "newCases":84,
+                "recovery":22,
                 "lastUpdated":"03/27/2020 09:00 AM"
             },
             {
@@ -250,6 +296,9 @@ const covidData = {
                 "confirmed":633,
                 "recovered":45,
                 "deceased":16,
+                "deaths":6,
+                "newCases":140,
+                "recovery":2,
                 "lastUpdated":"03/26/2020 09:00 AM"
             },
             {
@@ -257,6 +306,9 @@ const covidData = {
                 "confirmed":553,
                 "recovered":43,
                 "deceased":10,
+                "deaths":0,
+                "newCases":88,
+                "recovery":3,
                 "lastUpdated":"03/26/2020 09:00 AM"
             },
             {
@@ -264,6 +316,9 @@ const covidData = {
                 "confirmed":470,
                 "recovered":40,
                 "deceased":9,
+                "deaths":1,
+                "newCases":87,
+                "recovery":5,
                 "lastUpdated":"03/24/2020 09:00 AM"
             },
             {
@@ -271,6 +326,9 @@ const covidData = {
                 "confirmed":401,
                 "recovered":24,
                 "deceased":9,
+                "deaths":2,
+                "newCases":51,
+                "recovery":11,
                 "lastUpdated":"03/23/2020 09:00 AM"
             },
             {
@@ -278,6 +336,9 @@ const covidData = {
                 "confirmed":329,
                 "recovered":24,
                 "deceased":7,
+                "deaths":3,
+                "newCases":108,
+                "recovery":1,
                 "lastUpdated":"03/22/2020 09:00 AM"
             }
         ]

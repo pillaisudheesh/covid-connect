@@ -10,7 +10,8 @@ export class GraphInfo extends Component {
     this.state = {
       covidInfoList: [],
       activeCases: [],
-      deathsPerDay: []
+      deathsPerDay: [],
+      recoveryPerDay: []
     };
   }
 
@@ -31,8 +32,11 @@ export class GraphInfo extends Component {
     const deathPerDay = dataList.map((data, index) => {
       return data.deaths;
     })
+    const recovery = dataList.map((data, index) => {
+      return data.recovery;
+    })
     const activeCaseData = {
-      labels: dates.slice(dates.length - 10, dates.length),
+      labels: dates, //dates.slice(dates.length - 10, dates.length),
       datasets: [
         {
           label: 'Covid Data -Active Cases',
@@ -53,12 +57,38 @@ export class GraphInfo extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: activeCases.slice(activeCases.length - 10, activeCases.length)
+          data: activeCases //activeCases.slice(activeCases.length - 10, activeCases.length)
+        }
+      ]
+    };
+    const recoveryPerDay = {
+      labels: dates,
+      datasets: [
+        {
+          label: 'Covid Data - Recovery per day',
+          fill: false,
+          lineTension: 0.1,
+          backgroundColor: 'rgba(75,192,192,0.4)',
+          borderColor: '#43a047',
+          borderCapStyle: 'butt',
+          borderDash: [],
+          borderDashOffset: 0.0,
+          borderJoinStyle: 'miter',
+          pointBorderColor: '#43a047',
+          pointBackgroundColor: '#fff',
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: '#43a047',
+          pointHoverBorderColor: 'rgba(220,220,220,1)',
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: recovery //activeCases.slice(activeCases.length - 10, activeCases.length)
         }
       ]
     };
     const deaths = {
-      labels: dates.slice(dates.length - 10, dates.length),
+      labels: dates, //dates.slice(dates.length - 10, dates.length),
       datasets: [
         {
           label: 'Covid Data -Deaths per day',
@@ -67,14 +97,15 @@ export class GraphInfo extends Component {
           borderWidth: 1,
           hoverBackgroundColor: 'rgba(255,99,132,0.4)',
           hoverBorderColor: '#e53935',
-          data: deathPerDay.slice(deathPerDay.length - 10, deathPerDay.length)
+          data: deathPerDay //deathPerDay.slice(deathPerDay.length - 10, deathPerDay.length)
         }
       ]
     };
     this.setState(() => ({
       covidInfoList: dataList,
       activeCases: activeCaseData,
-      deathsPerDay: deaths
+      deathsPerDay: deaths,
+      recoveryPerDay: recoveryPerDay
     }));
   }
   render() {
@@ -85,7 +116,22 @@ export class GraphInfo extends Component {
             <Card className="card-height">
               <CardContent>
                 <div>
-                  <Line data={this.state.activeCases} />
+                  <Line data={this.state.activeCases} options={{
+                    scales: {
+                      xAxes: [{
+                        ticks: {
+                          min: 0,
+                          maxTicksLimit: 10
+                        }
+                      }],
+                      yAxes: [{
+                        ticks: {
+                          min: 0,
+                          maxTicksLimit: 5
+                        }
+                      }],
+                    }
+                  }}/>
                 </div>
               </CardContent>
             </Card>
@@ -95,8 +141,47 @@ export class GraphInfo extends Component {
               <CardContent>
                 <div>
                 <Bar
-                  data={this.state.deathsPerDay}
+                  data={this.state.deathsPerDay} options={{
+                    scales: {
+                      xAxes: [{
+                        ticks: {
+                          min: 0,
+                          maxTicksLimit: 10
+                        }
+                      }],
+                      yAxes: [{
+                        ticks: {
+                          min: 0,
+                          maxTicksLimit: 5
+                        }
+                      }],
+                    }
+                  }}
                 />
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item lg={6} sm={12} xl={12} xs={12}>
+            <Card className="card-height">
+              <CardContent>
+                <div>
+                <Line data={this.state.recoveryPerDay} options={{
+                    scales: {
+                      xAxes: [{
+                        ticks: {
+                          min: 0,
+                          maxTicksLimit: 10
+                        }
+                      }],
+                      yAxes: [{
+                        ticks: {
+                          min: 0,
+                          maxTicksLimit: 5
+                        }
+                      }],
+                    }
+                  }}/>
                 </div>
               </CardContent>
             </Card>
