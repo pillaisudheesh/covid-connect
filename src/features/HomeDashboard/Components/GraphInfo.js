@@ -112,7 +112,7 @@ export class GraphInfo extends Component {
     return (
       <div className={this.props.className}>
         <Grid container spacing={4}>
-          <Grid item lg={6} sm={12} xl={12} xs={12}>
+          <Grid item lg={6} sm={12} xl={6} xs={12}>
             <Card className="card-height">
               <CardContent>
                 <div>
@@ -136,7 +136,7 @@ export class GraphInfo extends Component {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item lg={6} sm={12} xl={12} xs={12}>
+          <Grid item lg={6} sm={12} xl={6} xs={12}>
             <Card className="card-height">
               <CardContent>
                 <div>
@@ -162,7 +162,7 @@ export class GraphInfo extends Component {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item lg={6} sm={12} xl={12} xs={12}>
+          <Grid item lg={6} sm={12} xl={6} xs={12}>
             <Card className="card-height">
               <CardContent>
                 <div>
