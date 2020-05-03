@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
 import { Card, CardContent, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import {MapDataContainer} from '../StyledComponents/MapData';
 
 
 export class GraphInfo extends Component {
@@ -112,6 +113,15 @@ export class GraphInfo extends Component {
     return (
       <div className={this.props.className}>
         <Grid container spacing={4}>
+        <Grid item lg={6} sm={12} xl={6} xs={12}>
+            <Card className="card-height">
+              <CardContent>
+                <div>
+                <MapDataContainer covidDataList={this.props.covidDataList} since={this.state.since}/>
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
           <Grid item lg={6} sm={12} xl={6} xs={12}>
             <Card className="card-height">
               <CardContent>
