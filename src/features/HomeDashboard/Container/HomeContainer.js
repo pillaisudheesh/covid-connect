@@ -5,6 +5,7 @@ import {TrackerInfoContainer} from '../StyledComponents/TrackerInfo';
 import * as dashboardActions from '../../../store/actions/dashboardAction';
 import {GraphInfoContainer} from '../StyledComponents/GraphInfo';
 import { bindActionCreators } from 'redux';
+import {MapDataContainer} from '../StyledComponents/MapData';
 
 
 export class HomeContainer extends Component{
@@ -37,6 +38,7 @@ export class HomeContainer extends Component{
               <GraphInfoContainer covidDataList={this.props.covidDataList} since={this.state.since}/>
               :""
             }
+            
       </div>
       );
   }
