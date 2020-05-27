@@ -2,6 +2,16 @@ const covidData = {
     "countries":{
         "India":[
             {
+                "date":"05/27/2020",
+                "confirmed":83004,
+                "recovered":64426,
+                "deceased":4337,
+                "deaths":170,
+                "newCases":6387,
+                "recovery":3935,
+                "lastUpdated":"05/27/2020 08:00 AM"
+            },
+            {
                 "date":"05/26/2020",
                 "confirmed":80722,
                 "recovered":60491,
