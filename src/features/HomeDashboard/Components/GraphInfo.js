@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
 import { Card, CardContent, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import LineGraph from './LineGraph';
 
 
 export class GraphInfo extends Component {
@@ -12,7 +13,9 @@ export class GraphInfo extends Component {
       activeCases: [],
       deathsPerDay: [],
       recoveryPerDay: [],
-      newCases:[]
+      newCases:[],
+      dates:[],
+      recovery:[]
     };
   }
 
@@ -147,22 +150,7 @@ export class GraphInfo extends Component {
             <Card className="card-height">
               <CardContent>
                 <div>
-                  <Line data={this.state.activeCases} options={{
-                    scales: {
-                      xAxes: [{
-                        ticks: {
-                          min: 0,
-                          maxTicksLimit: 10
-                        }
-                      }],
-                      yAxes: [{
-                        ticks: {
-                          min: 0,
-                          maxTicksLimit: 5
-                        }
-                      }],
-                    }
-                  }}/>
+                <LineGraph data={this.state.activeCases}/> 
                 </div>
               </CardContent>
             </Card>
@@ -197,46 +185,17 @@ export class GraphInfo extends Component {
             <Card className="card-height">
               <CardContent>
                 <div>
-                <Line data={this.state.recoveryPerDay} options={{
-                    scales: {
-                      xAxes: [{
-                        ticks: {
-                          min: 0,
-                          maxTicksLimit: 10
-                        }
-                      }],
-                      yAxes: [{
-                        ticks: {
-                          min: 0,
-                          maxTicksLimit: 5
-                        }
-                      }],
-                    }
-                  }}/>
-                </div>
+            <LineGraph data={this.state.recoveryPerDay}/> 
+             </div>
               </CardContent>
             </Card>
-          </Grid>
+           
+          </Grid> 
           <Grid item lg={6} sm={12} xl={6} xs={12}>
             <Card className="card-height">
               <CardContent>
                 <div>
-                <Line data={this.state.newCases} options={{
-                    scales: {
-                      xAxes: [{
-                        ticks: {
-                          min: 0,
-                          maxTicksLimit: 10
-                        }
-                      }],
-                      yAxes: [{
-                        ticks: {
-                          min: 0,
-                          maxTicksLimit: 5
-                        }
-                      }],
-                    }
-                  }}/>
+                <LineGraph data={this.state.newCases}/> 
                 </div>
               </CardContent>
             </Card>
