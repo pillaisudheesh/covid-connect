@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Line, Bar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import { Card, CardContent, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import LineGraph from './LineGraph';
