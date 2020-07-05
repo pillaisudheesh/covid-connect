@@ -2,13 +2,103 @@ const covidData = {
     "countries":{
         "India":[
           {
-            "date": "06/26/2020",
-            "confirmed": 189463,
-            "recovered": 285637,
-            "deceased": 14894,
+            "date": "07/05/2020",
+            "confirmed": 244814,
+            "recovered": 409083,
+            "deceased": 19268,
             "deaths": null,
             "newCases": null,
             "recovery": null,
+            "lastUpdated": "07/05/2020 08:00 AM"
+          },
+          {
+            "date": "07/04/2020",
+            "confirmed": 235433,
+            "recovered": 394227,
+            "deceased": 18655,
+            "deaths": 610,
+            "newCases": 24015,
+            "recovery": 14746,
+            "lastUpdated": "07/04/2020 08:00 AM"
+          },
+          {
+            "date": "07/03/2020",
+            "confirmed": 227439,
+            "recovered": 379892,
+            "deceased": 18213,
+            "deaths": 444,
+            "newCases": 22721,
+            "recovery": 14417,
+            "lastUpdated": "07/03/2020 08:00 AM"
+          },
+          {
+            "date": "07/02/2020",
+            "confirmed": 226947,
+            "recovered": 359860,
+            "deceased": 17834,
+            "deaths": 377,
+            "newCases": 21948,
+            "recovery": 19999,
+            "lastUpdated": "07/02/2020 08:00 AM"
+          },
+          {
+            "date": "07/01/2020",
+            "confirmed": 220114,
+            "recovered": 347979,
+            "deceased": 17400,
+            "deaths": 438,
+            "newCases": 19428,
+            "recovery": 12064,
+            "lastUpdated": "07/01/2020 08:00 AM"
+          },
+          {
+            "date": "06/30/2020",
+            "confirmed": 215125,
+            "recovered": 334822,
+            "deceased": 16893,
+            "deaths": 506,
+            "newCases": 18256,
+            "recovery": 12565,
+            "lastUpdated": "06/30/2020 08:00 AM"
+          },
+          {
+            "date": "06/29/2020",
+            "confirmed": 210120,
+            "recovered": 321723,
+            "deceased": 16475,
+            "deaths": 417,
+            "newCases": 18339,
+            "recovery": 13497,
+            "lastUpdated": "06/29/2020 08:00 AM"
+          },
+          {
+            "date": "06/28/2020",
+            "confirmed": 203051,
+            "recovered": 309713,
+            "deceased": 16095,
+            "deaths": 384,
+            "newCases": 19620,
+            "recovery": 11631,
+            "lastUpdated": "06/28/2020 08:00 AM"
+          },
+          {
+            "date": "06/27/2020",
+            "confirmed": 189463,
+            "recovered": 285637,
+            "deceased": 15685,
+            "deaths": 414,
+            "newCases": 20131,
+            "recovery": 14229,
+            "lastUpdated": "06/27/2020 08:00 AM"
+          },
+          {
+            "date": "06/26/2020",
+            "confirmed": 197387,
+            "recovered": 295881,
+            "deceased": 14894,
+            "deaths": 381,
+            "newCases": 18276,
+            "recovery": 10246,
             "lastUpdated": "06/26/2020 08:00 AM"
           },
           {
