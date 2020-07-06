@@ -2,13 +2,23 @@ const covidData = {
     "countries":{
         "India":[
           {
+            "date": "07/06/2020",
+            "confirmed": 253287,
+            "recovered": 424433,
+            "deceased": 19693,
+            "deaths": null,
+            "newCases": null,
+            "recovery": null,
+            "lastUpdated": "07/06/2020 08:00 AM"
+          },
+          {
             "date": "07/05/2020",
             "confirmed": 244814,
             "recovered": 409083,
             "deceased": 19268,
-            "deaths": null,
-            "newCases": null,
-            "recovery": null,
+            "deaths": 425,
+            "newCases": 24248,
+            "recovery": 15350,
             "lastUpdated": "07/05/2020 08:00 AM"
           },
           {
@@ -16,9 +26,9 @@ const covidData = {
             "confirmed": 235433,
             "recovered": 394227,
             "deceased": 18655,
-            "deaths": 610,
-            "newCases": 24015,
-            "recovery": 14746,
+            "deaths": 613,
+            "newCases": 24850,
+            "recovery": 14856,
             "lastUpdated": "07/04/2020 08:00 AM"
           },
           {
@@ -26,9 +36,9 @@ const covidData = {
             "confirmed": 227439,
             "recovered": 379892,
             "deceased": 18213,
-            "deaths": 444,
-            "newCases": 22721,
-            "recovery": 14417,
+            "deaths": 442,
+            "newCases": 22771,
+            "recovery": 14335,
             "lastUpdated": "07/03/2020 08:00 AM"
           },
           {
@@ -36,9 +46,9 @@ const covidData = {
             "confirmed": 226947,
             "recovered": 359860,
             "deceased": 17834,
-            "deaths": 377,
-            "newCases": 21948,
-            "recovery": 19999,
+            "deaths": 379,
+            "newCases": 20903,
+            "recovery": 20032,
             "lastUpdated": "07/02/2020 08:00 AM"
           },
           {
@@ -46,9 +56,9 @@ const covidData = {
             "confirmed": 220114,
             "recovered": 347979,
             "deceased": 17400,
-            "deaths": 438,
-            "newCases": 19428,
-            "recovery": 12064,
+            "deaths": 434,
+            "newCases": 19148,
+            "recovery": 11881,
             "lastUpdated": "07/01/2020 08:00 AM"
           },
           {
@@ -56,9 +66,9 @@ const covidData = {
             "confirmed": 215125,
             "recovered": 334822,
             "deceased": 16893,
-            "deaths": 506,
-            "newCases": 18256,
-            "recovery": 12565,
+            "deaths": 507,
+            "newCases": 18653,
+            "recovery": 13157,
             "lastUpdated": "06/30/2020 08:00 AM"
           },
           {
@@ -66,9 +76,9 @@ const covidData = {
             "confirmed": 210120,
             "recovered": 321723,
             "deceased": 16475,
-            "deaths": 417,
-            "newCases": 18339,
-            "recovery": 13497,
+            "deaths": 418,
+            "newCases": 18522,
+            "recovery": 13099,
             "lastUpdated": "06/29/2020 08:00 AM"
           },
           {
@@ -76,9 +86,9 @@ const covidData = {
             "confirmed": 203051,
             "recovered": 309713,
             "deceased": 16095,
-            "deaths": 384,
-            "newCases": 19620,
-            "recovery": 11631,
+            "deaths": 380,
+            "newCases": 19459,
+            "recovery": 12010,
             "lastUpdated": "06/28/2020 08:00 AM"
           },
           {
@@ -86,9 +96,9 @@ const covidData = {
             "confirmed": 189463,
             "recovered": 285637,
             "deceased": 15685,
-            "deaths": 414,
-            "newCases": 20131,
-            "recovery": 14229,
+            "deaths": 410,
+            "newCases": 19906,
+            "recovery": 13832,
             "lastUpdated": "06/27/2020 08:00 AM"
           },
           {
@@ -96,9 +106,9 @@ const covidData = {
             "confirmed": 197387,
             "recovered": 295881,
             "deceased": 14894,
-            "deaths": 381,
-            "newCases": 18276,
-            "recovery": 10246,
+            "deaths": 384,
+            "newCases": 18552,
+            "recovery": 10244,
             "lastUpdated": "06/26/2020 08:00 AM"
           },
           {
