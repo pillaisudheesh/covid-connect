@@ -55,7 +55,7 @@ const TrackerInfo = props => {
                                         variant="body2">
                                         ACTIVE CASES
                                     </Typography>
-                                    <Typography variant="h3">{statistics.confirmed}</Typography>
+                                    <Typography variant="h3">{statistics.confirmed.toLocaleString()}</Typography>
                                 </Grid>
                                 <Grid item>
                                     <Avatar className="avatar">
@@ -89,7 +89,7 @@ const TrackerInfo = props => {
                                         variant="body2">
                                         DECEASED
                                     </Typography>
-                                    <Typography variant="h3">{statistics.deceased}</Typography>
+                                    <Typography variant="h3">{statistics.deceased.toLocaleString()}</Typography>
                                 </Grid>
                                 <Grid item>
                                     <Avatar className="avatar-deceased">
@@ -131,7 +131,7 @@ const TrackerInfo = props => {
                                         variant="body2">
                                         RECOVERED
                                     </Typography>
-                                    <Typography variant="h3">{statistics.recovered}</Typography>
+                                    <Typography variant="h3">{statistics.recovered.toLocaleString()}</Typography>
                                 </Grid>
                                 <Grid item>
                                     <Avatar className="avatar-recovered">
@@ -171,7 +171,7 @@ const TrackerInfo = props => {
                                         variant="body2">
                                         TOTAL
                                     </Typography>
-                                    <Typography variant="h3">{totalCases}</Typography>
+                                    <Typography variant="h3">{totalCases.toLocaleString()}</Typography>
                                 </Grid>
                                 <Grid item>
                                     <Avatar className="avatar-total">
