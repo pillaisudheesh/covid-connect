@@ -2,13 +2,153 @@ const covidData = {
     "countries":{
         "India":[
           {
+            "date": "07/20/2020",
+            "confirmed": 390459,
+            "recovered": 700087,
+            "deceased": 27497,
+            "deaths": null,
+            "newCases": null,
+            "recovery": null,
+            "lastUpdated": "07/20/2020 08:00 AM"
+          },
+          {
+            "date": "07/19/2020",
+            "confirmed": 373339,
+            "recovered": 677423,
+            "deceased": 26816,
+            "deaths": 681,
+            "newCases": 40425,
+            "recovery": 22664,
+            "lastUpdated": "07/19/2020 08:00 AM"
+          },
+          {
+            "date": "07/18/2020",
+            "confirmed": 358692,
+            "recovered": 653751,
+            "deceased": 26273,
+            "deaths": 543,
+            "newCases": 38902,
+            "recovery": 23672,
+            "lastUpdated": "07/18/2020 08:00 AM"
+          },
+          {
+            "date": "07/17/2020",
+            "confirmed": 342473,
+            "recovered": 635757,
+            "deceased": 25602,
+            "deaths": 671,
+            "newCases": 34884,
+            "recovery": 17994,
+            "lastUpdated": "07/17/2020 08:00 AM"
+          },
+          {
+            "date": "07/16/2020",
+            "confirmed": 331146,
+            "recovered": 612815,
+            "deceased": 24915,
+            "deaths": 687,
+            "newCases": 34956,
+            "recovery": 22942,
+            "lastUpdated": "07/16/2020 08:00 AM"
+          },
+          {
+            "date": "07/15/2020",
+            "confirmed": 319840,
+            "recovered": 592032,
+            "deceased": 24309,
+            "deaths": 606,
+            "newCases": 32695,
+            "recovery": 20783,
+            "lastUpdated": "07/15/2020 08:00 AM"
+          },
+          {
+            "date": "07/14/2020",
+            "confirmed": 311565,
+            "recovered": 571460,
+            "deceased": 23727,
+            "deaths": 582,
+            "newCases": 29429,
+            "recovery": 20572,
+            "lastUpdated": "07/14/2020 08:00 AM"
+          },
+          {
+            "date": "07/13/2020",
+            "confirmed": 301609,
+            "recovered": 553471,
+            "deceased": 23174,
+            "deaths": 553,
+            "newCases": 28498,
+            "recovery": 17989,
+            "lastUpdated": "07/13/2020 08:00 AM"
+          },
+          {
+            "date": "07/12/2020",
+            "confirmed": 292258,
+            "recovered": 534621,
+            "deceased": 22674,
+            "deaths": 500,
+            "newCases": 28701,
+            "recovery": 18850,
+            "lastUpdated": "07/12/2020 08:00 AM"
+          },
+          {
+            "date": "07/11/2020",
+            "confirmed": 283407,
+            "recovered": 515386,
+            "deceased": 22123,
+            "deaths": 551,
+            "newCases": 28637,
+            "recovery": 19235,
+            "lastUpdated": "07/11/2020 08:00 AM"
+          },
+          {
+            "date": "07/10/2020",
+            "confirmed": 276682,
+            "recovered": 495516,
+            "deceased": 21604,
+            "deaths": 519,
+            "newCases": 27114,
+            "recovery": 19870,
+            "lastUpdated": "07/10/2020 08:00 AM"
+          },
+          {
+            "date": "07/09/2020",
+            "confirmed": 269789,
+            "recovered": 476378,
+            "deceased": 21129,
+            "deaths": 475,
+            "newCases": 26506,
+            "recovery": 19138,
+            "lastUpdated": "07/09/2020 08:00 AM"
+          },
+          {
+            "date": "07/08/2020",
+            "confirmed": 264944,
+            "recovered": 456831,
+            "deceased": 20642,
+            "deaths": 487,
+            "newCases": 24879,
+            "recovery": 19547,
+            "lastUpdated": "07/08/2020 08:00 AM"
+          },
+          {
+            "date": "07/07/2020",
+            "confirmed": 259557,
+            "recovered": 439948,
+            "deceased": 20160,
+            "deaths": 482,
+            "newCases": 22752,
+            "recovery": 16883,
+            "lastUpdated": "07/07/2020 08:00 AM"
+          },
+          {
             "date": "07/06/2020",
             "confirmed": 253287,
             "recovered": 424433,
             "deceased": 19693,
-            "deaths": null,
-            "newCases": null,
-            "recovery": null,
+            "deaths": 467,
+            "newCases": 22252,
+            "recovery": 15515,
             "lastUpdated": "07/06/2020 08:00 AM"
           },
           {
